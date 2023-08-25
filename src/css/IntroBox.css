@@ -1,0 +1,34 @@
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    /* width: 50%; */
+  }
+  
+  .box-head {
+    text-align: center;
+    color: white;
+    font: 700 24px/32px Mulish, Roboto, Helvetica Neue, sans-serif;
+  }
+  
+  .box-subhead {
+    padding-bottom: 24px;
+    padding-top: 16px;
+    font: 600 16px/24px Mulish, Helvetica, Roboto, sans-serif;
+    color: white;
+  }
+  .box-points {
+    place-content: stretch space-around;
+    flex-direction: row;
+  }
+  
+  .box-point {
+    font: 600 16px/24px Mulish, Roboto, Helvetica Neue, sans-serif;
+    padding-left: 12px;
+    color: white;
+  }
+  
+  .flex-display {
+    display: flex;
+  }

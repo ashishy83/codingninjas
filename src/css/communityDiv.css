@@ -1,0 +1,36 @@
+.hoverbox1{
+    display: flex;
+    width: 1000px;
+    height: 200px;
+
+    
+}
+.links{
+    text-decoration: none;
+    color: orangered;
+}
+.links:hover{
+    box-shadow: 0 5px 0 orange;
+
+}
+
+.left, .right{
+    display: flex;
+    margin: 2%;
+}
+
+.left{
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:space-around; 
+    width: 30%;
+}
+
+.right{
+    justify-content: space-around;
+    width: 70%;
+}
+
+.right div{
+    margin: 2%;
+}

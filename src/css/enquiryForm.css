@@ -1,0 +1,153 @@
+.querybox {
+  display: flex;
+  margin: 0 2%;
+  width: 68%;
+  height: 400px;
+  padding: 1%;
+  background-color: #fed3bc;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-top: 2%;
+  line-height: 5px;
+}
+
+.contact-form {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 92%;
+  padding: 1%;
+  background: #fff;
+  margin: 1%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #65657b;
+  
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+
+input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  margin: 3%;
+  border-radius: 5px;
+  outline: .5px solid grey;
+  transition: all 250ms;
+  color: black;
+ 
+}
+
+.input:hover {
+  outline: .5px solid black;
+}
+.input:focus {
+  outline-color: rgba(236, 56, 86, 0.826);
+ 
+}
+
+.cut {
+  background-color: red;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  top: -5px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: fit-content;
+  color: black; 
+}
+
+.ic {
+  position: relative;
+  width: 100%;
+  display: flex;  
+  margin-top: 2%;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+  /* border-color: rgba(236, 56, 86, 0.826); */
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+  background-color: #fff;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-15px) translateX(10px) scale(0.85);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+  /* color: black; */
+}
+
+.input:focus ~ .placeholder {
+  color: grey;
+}
+
+.btn-callback {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 2%;
+  background: linear-gradient(90deg, #f96b24 0%, #ff9100 100%);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.success {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  right: 20px;
+  top: 40px;
+  background: #ffff;
+  justify-content: space-evenly;
+}
+
+.msg {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  align-self: center;
+  font-size: small;
+}
+
+.fa-solid {
+  color: green;
+  font-size: x-large;
+}
+
+.fa-circle-xmark {
+  font-size: large;
+}

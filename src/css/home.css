@@ -1,0 +1,136 @@
+.width-container {
+  display: flex;
+
+  justify-content: center;
+  max-width: 1152px;
+  /* display: block; */
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+/* .intro .intro-container .intro-content-container .intro-head {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+} */
+
+.intro-cn {
+  color: #ee9f15;
+  background: -webkit-linear-gradient(var(--orange-60), #ee9f15);
+}
+.mascot-img {
+  height: 225px;
+  width: 276px;
+  animation-name: "bounce";
+  animation-duration: 4s;
+  animation-timing-function: infinite;
+}
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  25% {
+    bottom: 5px;
+  }
+  50%{
+    bottom: 0;
+  }
+  75%{
+    bottom: -5px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.button-container {
+  width: 100%;
+}
+
+.enroll-now-btn {
+  height: 48px;
+}
+.button-text {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.focus-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* position: absolute; */
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.35, 0, 0.25, 1),
+    background-color 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.intro-content-container {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* width: 80%; */
+}
+
+.intro-container {
+  display: flex;
+  /* justify-content: flex-end; */
+}
+
+.intro-box {
+  max-width: 965px;
+  /* width: 70%;
+  height: 70%; */
+  background: linear-gradient(
+      97.82deg,
+      rgba(32, 5, 84, 0.2) 5.54%,
+      rgba(31, 21, 94, 0.2) 98.35%
+    ),
+    #0a2541;
+  box-shadow: 0 12px 24px #3a3a4414, 0 24px 48px #5a5b6a14;
+  border-radius: 8px;
+
+  margin: 2%;
+}
+
+
+.intro-text {
+  font: 700 28px normal;
+  line-height: 42px;
+  overflow: hidden;
+}
+
+.intro-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.intro-num {
+  font: 700 20px/32px Mulish, Roboto, Helvetica Neue, sans-serif;
+  padding-bottom: 24px;
+}
+
+.enroll-now-btn {
+  background-image: linear-gradient(90deg, #f96b24 0%, #ff9100 100%);
+  color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  overflow: visible;
+  margin: 0;
+  min-width: 48px;
+  line-height: 22px;
+  border-radius: 6px;
+  padding: 0 24px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+}

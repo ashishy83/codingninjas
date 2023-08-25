@@ -1,0 +1,46 @@
+.enroll-now{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 3rem 0;
+    
+}
+.enroll-container{
+    /* border: 1px solid grey; */
+    /* background-color: rgb(255, 240, 240); */
+    background-color: #e7ecf033;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+   
+
+}
+
+.experience{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 220px;
+    height: 300px;
+    margin: 1rem;
+    border: 1px solid #686f7433;
+    border-radius: 15px;
+    box-shadow: -1px 10px 20px #a4aeb533;
+    cursor: pointer;
+}
+
+
+h2, h5{
+    font-weight: 500;
+    line-height: normal;
+    margin: 1px;
+}

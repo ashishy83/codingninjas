@@ -1,0 +1,50 @@
+.practice{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 180px;
+    height: max-content;
+    position: relative;
+    padding: auto;
+    /* align-items: flex-start; */
+    /* justify-items: flex-start; */
+}
+
+.link{
+    padding-right: 6px;
+    color: var(--grey-60);
+    text-decoration: none;
+    font-family: Mulish,Helvetica,Arial,sans-serif;
+    margin: 2%;
+    cursor: pointer;
+
+}
+
+&:hover{
+    box-shadow: 0 1px 0 orange;
+
+}
+
+.link1{
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.link1:hover{
+    box-shadow: none;
+}
+
+.link2{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+hr{
+    width: 60%;
+    background-color: orangered;
+    height: 1px;
+    border: none;
+    margin-left: 0;
+    
+}
