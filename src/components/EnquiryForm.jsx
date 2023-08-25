@@ -15,24 +15,33 @@ const EnquiryForm = () => {
     year: "",
   });
   // "https://cd-ninjas-back-end.vercel.app/callback"
-  const onRequest = (formdata) => {
+  const onRequest = (data) => {
     // e.preventDefault();
     axios
-    .post("http://localhost:8080/callback", { formdata })
-    .then((res) => {
-      setShowPopup(true);
-      console.log(res)
-    })
-      .catch(err => {
-        if(err.response){
-          console.log("Server Error:",err.response)
+      .post(
+        "https://cd-ninjas-back-end.vercel.app/auth/callback",
+        data,
+        {
+          headers: {
+            Authorization: "Bearer CodingNinjas@beta1",
+          },
+
+          withCredentials: true,
         }
-        else if (err.request) {
+      )
+      .then((res) => {
+        setShowPopup(true);
+        console.log(res);
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log("Server Error:", err.response);
+        } else if (err.request) {
           // Request was made but no response received
-          console.log('Request Error:', err.request);
+          console.log("Request Error:", err.request);
         } else {
           // Something else triggered the error
-          console.log('Error:', err.message);
+          console.log("Error:", err.message);
         }
       });
     console.log(formdata);
@@ -63,11 +72,7 @@ const EnquiryForm = () => {
           <h2 style={{ fontWeight: "bold", top: "0%" }}>1800-123-3598</h2>
         </div>
         <div className="contact-form">
-          <form
-            onSubmit={handleSubmit(onRequest)}
-            method="POST"
-            action="https://cd-ninjas-back-end.vercel.app/callback"
-          >
+          <form onSubmit={handleSubmit(onRequest)} method="POST">
             <div className="ic">
               <input
                 type="number"

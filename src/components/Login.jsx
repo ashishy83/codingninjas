@@ -8,11 +8,25 @@ import axios from "axios";
 // import Navbar from "./Navbar";
 
 const Login = () => {
-  const onLogin = () => {
+  const onLogin = (data) => {
     axios
-      .get("https://cd-ninjas-back-end.vercel.app/auth/login")
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .post("https://cd-ninjas-back-end.vercel.app/auth/login",data,{
+        headers:{
+          Authorization:'Bearer CodingNinjas@beta1'
+        },
+        withCredentials: true,
+
+      })
+      .then((res) => console.log(res.json()))
+      .catch((error) => {
+        if(error.response){
+          console.log("Server Error:",error.response)
+        }else if(error.request){
+          console.log("Request Error: ",error.request)
+        }else{
+          console.log("Error: ",error.message)
+        }
+      });
   };
 
   // const navi = useNavigate();
@@ -26,10 +40,10 @@ const Login = () => {
           </div>
         </div>
         <div className="link-box">
-          <Link className="login-links" to={"/www.google.com/auth/accounts"}>
+          <Link className="login-links" to={"/www.google.com/auth0/accounts"}>
             <img className="img" src={google} alt="google" /> Login with Google
           </Link>
-          <Link className="login-links" to={"/www.facebook.com/auth/accounts"}>
+          <Link className="login-links" to={"/www.facebook.com/auth0 /accounts"}>
             <img src={fb} alt="fb" className="img" /> Login with Facebook
           </Link>
           <Link className="login-links" to={"/www.Naukri.com/auth/accounts"}>
@@ -38,7 +52,7 @@ const Login = () => {
         </div>
         <div style={{ textAlign: "center" }}>OR</div>
         <div>Use your email address</div>
-        <form action="" className="loginForm" onSubmit={onLogin}>
+        <form method="POST" className="loginForm" onSubmit={onLogin} autoComplete="true">
           <label htmlFor="email">Email Address</label>
           <input type="email" />
           <label htmlFor="" >Password</label>
